@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --white: #fff;
+  --light-gray: #F2F2F2;
+  --black: #000;
+  --dark-green: #285943;
+  --light-green: #8ed696;
+
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%; // 15px;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%; // 14px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+
+  &:visited {
+    color: unset;
+  }
+}
+
+ul {
+  list-style: none !important;
+}
+
+button{
+  cursor: pointer;
+}

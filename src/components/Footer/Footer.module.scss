@@ -1,0 +1,31 @@
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid var(--light-gray);
+  padding: 2rem;
+  background-color: var(--light-gray);
+
+  button {
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    background-color: var(--dark-green);
+    color: var(--white);
+    border: 1px solid var(--dark-green);
+    font-weight: 800;
+  }
+}
+
+.logoWrapper {
+  div {
+    width: 50px;
+    margin: 1rem 1rem 1rem 0;
+
+    img {
+      width: 100%;
+    }
+  }
+  p {
+    font-size: 1.4rem;
+  }
+}
