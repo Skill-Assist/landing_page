@@ -68,7 +68,7 @@ export default function Home() {
             </p>
             <button>Conheça mais!</button>
           </div>
-          <div className={styles.gifContainer}>
+          <div className={styles.homeGifContainer}>
             <Image src={homeGif} alt="my gif" height={500} width={500} />
           </div>
         </section>
