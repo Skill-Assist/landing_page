@@ -74,7 +74,7 @@ export default function Home() {
             </h1>
             <p>
               Através de uma ferramenta de seleção automatizada, é possível
-              realizar testes de modo mais rápido, seguro, confiável a
+              realizar testes de modo mais rápido, seguro, confiável e
               abrangente que nunca.
             </p>
             <button onClick={contactHandler}>Conheça mais</button>
