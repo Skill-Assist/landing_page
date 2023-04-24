@@ -3,15 +3,15 @@ import styles from "./Footer.module.scss";
 const Footer = (props) => {
   return (
     <div className={styles.footerContainer}>
-      <div className={styles.logoWrapper}>
-        <div>
-          <img src="/logo.png" />
+      <div className={styles.footerContent}>
+        <div className={styles.logoWrapper}>
+          <div>
+            <img src="/logo.png" />
+          </div>
         </div>
-        <p>© 2022 Copyright: Skill Assist</p>
+        <button onClick={props.onClick}>Entre em contato</button>
       </div>
-      <button>
-        Entre em contato!
-      </button>
+      <p>© 2022 Copyright: Skill Assist</p>
     </div>
   );
 };
