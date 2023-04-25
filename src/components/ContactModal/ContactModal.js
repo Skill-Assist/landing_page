@@ -7,10 +7,10 @@ import { BsWhatsapp } from "react-icons/bs";
 import ContactModalCtx from "@/context/moda-context";
 
 import styles from "./ContactModal.module.scss";
+import Form from "../Form/Form";
 
 const ContactModal = () => {
   const modalCtx = useContext(ContactModalCtx);
-
   return (
     <AnimatePresence>
       {modalCtx.showModal && (
@@ -79,26 +79,7 @@ const ContactModal = () => {
                   <GrClose onClick={modalCtx.showModalHandler} size={15} />
                 </header>
                 <div className={styles.contactInfo}>
-                  <div className={styles.emailContainer}>
-                    <div className={styles.field}>
-                      <AiOutlineMail size={20} />
-                      <p>luiz.alencar@sou.inteli.edu.br</p>
-                    </div>
-                    <div className={styles.field}>
-                      <AiOutlineMail size={20} />
-                      <p>marcos.silva@sou.inteli.edu.br</p>
-                    </div>
-                  </div>
-                  <div className={styles.wppContainer}>
-                    <a href="https://wa.me/5527992022779" target="_blank" className={styles.field}>
-                      <BsWhatsapp size={20} />
-                      <p>(27) 99202 2779</p>
-                    </a>
-                    <a href="https://wa.me/5521997553342" target="_blank" className={styles.field}>
-                      <BsWhatsapp size={20} />
-                      <p>(21) 99755 3342</p>
-                    </a>
-                  </div>
+                  <Form />
                 </div>
               </div>
             </motion.div>

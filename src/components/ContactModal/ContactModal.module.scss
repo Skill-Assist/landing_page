@@ -27,28 +27,6 @@
   color: var(--dark-green);
 }
 
-//   .modalWrapper {
-//     overflow-y: scroll;
-//     height: fit-content;
-
-//     &::-webkit-scrollbar {
-//       width: 0.7rem;
-//     }
-
-//     &::-webkit-scrollbar-track {
-//       background: var(--dark-gray);
-//     }
-
-//     &::-webkit-scrollbar-thumb {
-//       background: var(--light-gray);
-//       border-radius: 1rem;
-//     }
-
-//     &::-webkit-scrollbar-thumb:hover {
-//       background: var(--light-gray);
-//     }
-//   }
-
 .header {
   display: flex;
   align-items: center;
@@ -80,31 +58,16 @@
 
 .contactInfo {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   padding: 2rem;
 
   width: 100%;
 }
 
-.field {
-  display: flex;
-  align-items: center;
-
-  p {
-    margin: 1rem;
-    font-size: 2rem;
-  }
-}
-
 @media only screen and (max-width: 900px) {
   .modalContentWrapper {
     width: 90%;
     height: fit-content;
-  }
-
-  .contactInfo {
-    flex-direction: column;
   }
 }
