@@ -7,10 +7,10 @@ const Header = (props) => {
         <img src="/logo.png" />
         <p>Skill Assist</p>
       </div>
-      <div className={styles.actionContainer}>
+      {/* <div className={styles.actionContainer}>
         <button className={styles.register}>Signup</button>
         <button className={styles.login}>Login</button>
-      </div>
+      </div> */}
     </div>
   );
 };
