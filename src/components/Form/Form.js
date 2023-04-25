@@ -44,6 +44,7 @@ const Form = () => {
             <label htmlFor="entry.959855310">Nome:</label>
             <input
               required
+              placeholder="Insira seu nome"
               type="text"
               name="entry.959855310"
               onChange={handleInputData("entry.959855310")}
@@ -56,6 +57,7 @@ const Form = () => {
             <label htmlFor="entry.1924770189">E-mail:</label>
             <input
               required
+              placeholder="Insira seu email"
               type="email"
               name="entry.1924770189"
               onChange={handleInputData("entry.1924770189")}
@@ -68,6 +70,7 @@ const Form = () => {
             <label htmlFor="entry.1990946137">Telefone:</label>
             <input
               type="tel"
+              placeholder="( ) _____-____"
               name="entry.1990946137"
               onChange={handleInputData("entry.1990946137")}
               value={formData["entry.1990946137"]}
@@ -80,8 +83,6 @@ const Form = () => {
             <textarea
               required
               name="entry.1594245412"
-              rows="4"
-              cols="10"
               onChange={handleInputData("entry.1594245412")}
               value={formData["entry.1594245412"]}
               autoComplete={false}
