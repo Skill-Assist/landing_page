@@ -6,7 +6,7 @@ const Footer = (props) => {
       <div className={styles.footerContent}>
         <div className={styles.logoWrapper}>
           <div>
-            <img src="/logo.png" />
+            <img src="/logo.png" alt="footer_logo"/>
           </div>
         </div>
         <button onClick={props.onClick}>Entre em contato</button>

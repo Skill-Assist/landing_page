@@ -4,9 +4,9 @@ const SolutionBox = (props) => {
   return (
     <div className={styles.solutionContainer}>
       <div className={styles.iconContainer}>
-        <img src={props.icon} />
+        <img src={`/${props.icon}`} alt={`${"icon_" + props.icon}` }/>
       </div>
-      <h3>{props.title}</h3>
+      <h2>{props.title}</h2>
       <p>{props.description}</p>
     </div>
   );
