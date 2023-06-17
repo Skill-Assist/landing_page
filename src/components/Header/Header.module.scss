@@ -30,10 +30,18 @@
   justify-content: center;
   align-items: center;
 
-  button {
+  a {
     margin: 0 2rem;
     padding: 1rem 1.5rem;
     border-radius: 1rem;
+    font-size: 1.3rem;
+    color: var(--white);
+    transition: 300ms;
+
+    &:hover {
+      scale: 1.05;
+    }
+
   }
 }
 
@@ -52,8 +60,8 @@
   font-weight: 800;
 }
 
-@media only screen and (max-width: 900px) {
-  .actionContainer {
-    display: none;
-  }
-}
+// @media only screen and (max-width: 900px) {
+//   .actionContainer {
+//     display: none;
+//   }
+// }

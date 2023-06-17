@@ -7,10 +7,10 @@ const Header = (props) => {
         <img src="/logo.png" alt="header_logo"/>
         <p>Skill Assist</p>
       </div>
-      {/* <div className={styles.actionContainer}>
-        <button className={styles.register}>Signup</button>
-        <button className={styles.login}>Login</button>
-      </div> */}
+      <div className={styles.actionContainer}>
+        {/* <button className={styles.register}>Signup</button> */}
+        <a href="http://localhost:3000/login" target="_blank" className={styles.login} >Login</a>
+      </div>
     </div>
   );
 };
