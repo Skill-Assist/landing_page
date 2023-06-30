@@ -9,7 +9,7 @@ const Header = (props) => {
       </div>
       <div className={styles.actionContainer}>
         {/* <button className={styles.register}>Signup</button> */}
-        <a href="http://localhost:3000/login" target="_blank" className={styles.login} >Login</a>
+        <a href={process.env.NEXT_PUBLIC_LOGIN_URL} target="_blank" className={styles.login} >Login</a>
       </div>
     </div>
   );
