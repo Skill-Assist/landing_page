@@ -11,7 +11,7 @@
 .modalContentWrapper {
   z-index: 1001;
   position: fixed;
-  width: 800px;
+  width: 600px;
   height: fit-content;
   top: 0;
   bottom: 0;
@@ -42,7 +42,7 @@
   }
 
   svg {
-    right: 0;
+    right: 1rem;
     transition: 200ms ease;
     cursor: pointer;
 

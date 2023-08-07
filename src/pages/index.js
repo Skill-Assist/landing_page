@@ -22,7 +22,7 @@ export default function Home() {
       icon: 'automation.png',
       title: 'Automatização',
       description:
-        'Nossa plataforma de recrutamento utiliza testes automatizados para avaliar as habilidades de programação de potenciais candidatos em tempo real. Isso garante uma avaliação rápida e justa, gerando economias de tempo e recursos.',
+        'Nossa plataforma utiliza testes automatizados para avaliar as habilidades e competências de potenciais candidatos em tempo real. Isso garante uma avaliação rápida e justa, gerando economias de tempo e recursos.',
     },
     {
       id: 2,
@@ -48,9 +48,9 @@ export default function Home() {
     {
       id: 5,
       icon: 'ai.png',
-      title: 'Correção baseada em AI',
+      title: 'Augmented  AI',
       description:
-        'Nossa plataforma realiza correções de testes com base em algoritmos de Al, gerando relatórios detalhados com insights valiosos das capacidades técnicas demonstradas pelos candidatos, gerando melhores decisões pela equipe de recrutamento.',
+        'Nossa plataforma realiza correções dos exames com base em algoritmos de Al, gerando relatórios detalhados com insights valiosos das capacidades técnicas demonstradas pelos candidatos. Além disso, também por meio de IA, auxilia na criação de questões.',
     },
     {
       id: 6,
