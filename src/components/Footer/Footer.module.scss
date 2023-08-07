@@ -1,8 +1,8 @@
 .footerContainer {
   text-align: center;
-  border-top: 2px solid var(--light-gray);
+  border-top: 2px solid var(--neutral-100);
   padding: 2rem;
-  background-color: var(--light-gray);
+  background-color: var(--neutral-100);
 }
 
 .footerContent {
@@ -13,9 +13,9 @@
   button {
     padding: 1rem 1.5rem;
     border-radius: 1rem;
-    background-color: var(--dark-green);
-    color: var(--white);
-    border: 1px solid var(--dark-green);
+    background-color: var(--primary);
+    color: var(--neutral-0);
+    border: 1px solid var(--primary);
     font-weight: 800;
   }
 }

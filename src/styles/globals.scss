@@ -1,11 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;500;600;700;800&display=swap');
 
 :root {
-  --white: #fff;
-  --light-gray: #F2F2F2;
-  --black: #000;
-  --dark-green: #285943;
-  --light-green: #8ed696;
+  --primary: #285943;
+  --primary-2: #8ed696;
+  --primary-3: #bef3c4;
+  --secondary: #3e4d5c;
+  --secondary-2: #637381;
+
+  --neutral-900: #151719;
+  --neutral-300: #9BA9B4;
+  --neutral-200: #cdcdcd;
+  --neutral-100: #e4e4e4;
+  --neutral-50: #f4f6f8;
+  --neutral-0: #ffffff;
 
   font-size: 62.5%;
 }
@@ -14,11 +21,37 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 
   &:focus {
     outline: none;
   }
+
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    border-radius: 1rem;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 1rem;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-2);
+  }
+}
+
+body {
+  background-color: var(--neutral-50);
+  color: var(--secondary);
+  font-size: 1.6rem;
 }
 
 @media (max-width: 1080px) {
@@ -46,6 +79,6 @@ ul {
   list-style: none !important;
 }
 
-button{
+button {
   cursor: pointer;
 }

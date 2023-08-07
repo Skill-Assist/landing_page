@@ -19,14 +19,14 @@
 
     input,
     textarea {
-      border: 1px solid var(--light-green);
+      border: 1px solid var(--primary-2);
       border-radius: 0.6rem;
       padding: 0.5rem;
       width: 100%;
       transition: 200ms;
 
       &:focus {
-        border-color: var(--dark-green);
+        border-color: var(--primary);
       }
 
     }
@@ -36,15 +36,15 @@
     padding: 0.6rem 2rem;
     width: min-content;
     border-radius: 1rem;
-    background-color: var(--white);
-    color: var(--dark-green);
-    border: 1px solid var(--dark-green);
+    background-color: var(--neutral-0);
+    color: var(--primary);
+    border: 1px solid var(--primary);
     font-weight: 800;
     transition: 200ms;
 
     &:hover {
-      background-color: var(--dark-green);
-      color: var(--white);
+      background-color: var(--primary);
+      color: var(--neutral-0);
       scale: 1.05;
     }
   }

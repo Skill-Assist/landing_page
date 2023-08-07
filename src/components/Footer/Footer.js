@@ -11,7 +11,7 @@ const Footer = (props) => {
         </div>
         <button onClick={props.onClick}>Entre em contato</button>
       </div>
-      <p>© 2022 Copyright: Skill Assist</p>
+      <p>© 2023 Copyright: Skill Assist</p>
     </div>
   );
 };

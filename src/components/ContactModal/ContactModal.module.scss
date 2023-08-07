@@ -18,13 +18,13 @@
   left: 0;
   right: 0;
   margin: auto;
-  background: var(--white);
+  background: var(--neutral-0);
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
   transition: 400ms;
   justify-content: center;
-  color: var(--dark-green);
+  color: var(--primary);
 }
 
 .header {
@@ -32,7 +32,7 @@
   align-items: center;
   justify-content: flex-end;
   padding: 1rem;
-  border-bottom: 1px solid var(--light-green);
+  border-bottom: 1px solid var(--primary-2);
 
   h1 {
     font-weight: 400;
@@ -51,7 +51,7 @@
     }
 
     path {
-      stroke: var(--dark-green);
+      stroke: var(--primary);
     }
   }
 }
