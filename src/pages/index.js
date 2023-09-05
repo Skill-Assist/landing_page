@@ -100,8 +100,8 @@ export default function Home() {
           {/* <Image src={demoGif} alt="my gif" /> */}
           <iframe
             src="https://drive.google.com/file/d/1y434eiPf24zyScz-LrI6EZHfynI1SzbY/preview"
-            width="640"
-            height="480"
+            // width="640"
+            // height="480"
             allow="autoplay"
           ></iframe>
         </section>
