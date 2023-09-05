@@ -49,11 +49,12 @@
   text-align: center;
 
 
-  img {
+  img, iframe {
     margin-bottom: 3rem;
     border-radius: .8rem;
     height: 57.6rem;
     width: 102.08rem;
+    border: none;
   }
 }
 

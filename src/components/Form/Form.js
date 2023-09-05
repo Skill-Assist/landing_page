@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import InputMask from 'react-input-mask';
 
 import styles from './Form.module.scss';
 
@@ -26,12 +27,16 @@ const Form = () => {
 
     let url = `https://docs.google.com/forms/d/e/1FAIpQLSdOjEHKZxz3NP4gljkuqpEWwZHbD1-qVyago39eKQXwtzbDIw/formResponse?entry.959855310=${formData['entry.959855310']}&entry.1924770189=${formData['entry.1924770189']}&entry.1990946137=${formData['entry.1990946137']}&entry.1594245412=${formData['entry.1594245412']}`;
 
-    const res = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-    });
+    try {
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      });
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   return (
@@ -74,7 +79,9 @@ const Form = () => {
 
           <fieldset>
             <label htmlFor="entry.1990946137">Telefone:</label>
-            <input
+            <InputMask
+              id="mobilePhone"
+              mask="(99) 99999-9999"
               type="tel"
               placeholder="( ) _____-____"
               name="entry.1990946137"

@@ -75,7 +75,7 @@ const ContactModal = () => {
             >
               <div>
                 <header className={styles.header}>
-                  <h1>Contato</h1>
+                  <h1>Lista de espera</h1>
                   <GrClose onClick={modalCtx.showModalHandler} size={15} />
                 </header>
                 <div className={styles.contactInfo}>

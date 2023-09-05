@@ -93,11 +93,17 @@ export default function Home() {
               realizar testes de modo mais rápido, seguro, confiável e mais
               abrangente que nunca.
             </p>
-            <button onClick={contactHandler}>Conheça mais</button>
+            <button onClick={contactHandler}>Lista de espera</button>
           </div>
         </section>
         <section className={styles.video}>
-          <Image src={demoGif} alt="my gif" />
+          {/* <Image src={demoGif} alt="my gif" /> */}
+          <iframe
+            src="https://drive.google.com/file/d/1y434eiPf24zyScz-LrI6EZHfynI1SzbY/preview"
+            width="640"
+            height="480"
+            allow="autoplay"
+          ></iframe>
         </section>
         <section className={styles.solutions}>
           <h1>Nossos diferenciais</h1>
