@@ -167,14 +167,26 @@ export default function Home() {
             )}
           </p>
           <div className={styles.solutionsContainer}>
-            {solutions.map((solution) => (
-              <SolutionBox
-                key={solution.id}
-                icon={solution.icon}
-                title={solution.title}
-                description={solution.description}
-              />
-            ))}
+            {solutions.map((solution) => {
+              if (isLoading) {
+                return (
+                  <Skeleton
+                    width={isMobile ? 380 : '100%'}
+                    height={280}
+                    style={{ margin: '20px' }}
+                  />
+                );
+              } else {
+                return (
+                  <SolutionBox
+                    key={solution.id}
+                    icon={solution.icon}
+                    title={solution.title}
+                    description={solution.description}
+                  />
+                );
+              }
+            })}
           </div>
         </section>
         <Footer onClick={contactHandler} />
