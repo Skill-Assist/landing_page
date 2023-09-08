@@ -171,7 +171,7 @@ export default function Home() {
               if (isLoading) {
                 return (
                   <Skeleton
-                    width={isMobile ? 380 : '100%'}
+                    width={isMobile ? '100%' : 380}
                     height={280}
                     style={{ margin: '20px' }}
                   />
