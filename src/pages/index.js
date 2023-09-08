@@ -82,7 +82,7 @@ export default function Home() {
 
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 3000);
   }, []);
 
   return (
@@ -116,7 +116,18 @@ export default function Home() {
         </section>
         <section className={styles.video}>
           {isLoading ? (
-            <Skeleton height={356} width={634} />
+            <Skeleton
+              height={
+                typeof window !== 'undefined' && window.innerWidth > 400
+                  ? 356
+                  : 180
+              }
+              width={
+                typeof window !== 'undefined' && window.innerWidth > 400
+                  ? 632
+                  : 200
+              }
+            />
           ) : (
             <video controls loop width="100%">
               <source src="/teaser.mp4" type="video/mp4" />
@@ -126,7 +137,15 @@ export default function Home() {
         <section className={styles.solutions}>
           <h1>
             {isLoading ? (
-              <Skeleton width={374} height={46} style={{ marginTop: '30px' }} />
+              <Skeleton
+                width={
+                  typeof window !== 'undefined' && window.innerWidth > 400
+                    ? 374
+                    : 200
+                }
+                height={46}
+                style={{ marginTop: '30px' }}
+              />
             ) : (
               'Nossos diferenciais'
             )}
@@ -134,7 +153,11 @@ export default function Home() {
           <p>
             {isLoading ? (
               <Skeleton
-                width={383}
+                width={
+                  typeof window !== 'undefined' && window.innerWidth > 400
+                    ? 383
+                    : 200
+                }
                 height={23}
                 style={{ marginBottom: '10px' }}
               />
