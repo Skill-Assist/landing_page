@@ -40,7 +40,7 @@
     padding: 0.6rem 2rem;
     margin-top: 1rem;
     width: min-content;
-    border-radius: 1rem;
+    border-radius: 0.6rem;
     background-color: var(--neutral-0);
     color: var(--primary);
     border: 1px solid var(--primary);
@@ -57,4 +57,15 @@
 
 .afterForm{
     font-size: 1.6rem;
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+
+  fieldset{
+    margin: 0.6rem 0;
+  }
 }

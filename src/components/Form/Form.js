@@ -9,6 +9,8 @@ const Form = () => {
     'entry.959855310': '',
     'entry.1924770189': '',
     'entry.1990946137': '',
+    'entry.1038165344': '',
+    'entry.902404888': '',
     'entry.1594245412': '',
   });
 
@@ -25,7 +27,7 @@ const Form = () => {
     e.preventDefault();
     setSubmit(true);
 
-    let url = `https://docs.google.com/forms/d/e/1FAIpQLSdOjEHKZxz3NP4gljkuqpEWwZHbD1-qVyago39eKQXwtzbDIw/formResponse?entry.959855310=${formData['entry.959855310']}&entry.1924770189=${formData['entry.1924770189']}&entry.1990946137=${formData['entry.1990946137']}&entry.1594245412=${formData['entry.1594245412']}`;
+    let url = `https://docs.google.com/forms/d/e/1FAIpQLSdOjEHKZxz3NP4gljkuqpEWwZHbD1-qVyago39eKQXwtzbDIw/formResponse?entry.959855310=${formData['entry.959855310']}&entry.1924770189=${formData['entry.1924770189']}&entry.1990946137=${formData['entry.1990946137']}&entry.1038165344=${formData['entry.1038165344']}&entry.902404888=${formData['entry.902404888']}&entry.1594245412=${formData['entry.1594245412']}`;
 
     try {
       const res = await fetch(url, {
@@ -91,8 +93,41 @@ const Form = () => {
             />
           </fieldset>
 
+          <div className={styles.row}>
+            <fieldset>
+              <label htmlFor="entry.1038165344">
+                Número de vagas de TI por ano:
+              </label>
+              <input
+                required
+                placeholder="Quantidade de vagas"
+                type="number"
+                name="entry.1038165344"
+                onChange={handleInputData('entry.1038165344')}
+                value={formData['entry.1038165344']}
+                autoComplete={false}
+              />
+            </fieldset>
+            <fieldset>
+              <label htmlFor="entry.902404888">
+                Quantidade de candidatos por ano:
+              </label>
+              <input
+                required
+                placeholder="Quantidade de candidatos"
+                type="number"
+                name="entry.902404888"
+                onChange={handleInputData('entry.902404888')}
+                value={formData['entry.902404888']}
+                autoComplete={false}
+              />
+            </fieldset>
+          </div>
+
           <fieldset>
-            <label htmlFor="entry.1594245412">Message:</label>
+            <label htmlFor="entry.1594245412">
+              Como é o processo seletivo atualmente?
+            </label>
             <textarea
               rows={6}
               required

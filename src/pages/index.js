@@ -1,8 +1,7 @@
-import { useContext, useEffect } from 'react';
-import Image from 'next/image';
+import { useContext, useEffect, useState } from 'react';
 import Aos from 'aos';
-
-import demoGif from '@public/demo.gif';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 import Header from '@/components/Header/Header';
 import SolutionBox from '@/components/SolutionBox/SolutionBox';
@@ -14,6 +13,7 @@ import styles from '../styles/index.module.scss';
 import 'aos/dist/aos.css';
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
   const modalCtx = useContext(ContactModalCtx);
 
   const solutions = [
@@ -76,7 +76,13 @@ export default function Home() {
       box.setAttribute('data-aos-delay', delay.toString());
     });
 
-    Aos.init({ duration: 2000 });
+    if (typeof window !== 'undefined') {
+      Aos.init({ duration: 1000 });
+    }
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
   }, []);
 
   return (
@@ -86,28 +92,46 @@ export default function Home() {
         <section className={styles.home}>
           <div className={styles.textContainer}>
             <h1 onClick={modalCtx.consoleLog}>
-              Simplificamos a aplicação de provas com IA
+              {isLoading ? (
+                <Skeleton />
+              ) : (
+                'Simplificamos a aplicação de provas com IA'
+              )}
             </h1>
             <p>
-              Através de uma ferramenta de seleção automatizada, é possível
-              realizar testes de modo mais rápido, seguro, confiável e mais
-              abrangente que nunca.
+              {isLoading ? (
+                <Skeleton />
+              ) : (
+                `Através de uma ferramenta de seleção automatizada, é possível
+                realizar testes de modo mais rápido, seguro, confiável e mais
+                abrangente que nunca.`
+              )}
             </p>
-            <button onClick={contactHandler}>Lista de espera</button>
+            {isLoading ? (
+              <Skeleton height={42} width={180} />
+            ) : (
+              <button onClick={contactHandler}>Lista de espera</button>
+            )}
           </div>
         </section>
         <section className={styles.video}>
-          {/* <Image src={demoGif} alt="my gif" /> */}
-          <iframe
-            src="https://drive.google.com/file/d/1y434eiPf24zyScz-LrI6EZHfynI1SzbY/preview"
-            // width="640"
-            // height="480"
-            allow="autoplay"
-          ></iframe>
+          {isLoading ? (
+            <Skeleton height={356} width={634} />
+          ) : (
+            <video controls loop width="100%">
+              <source src="/teaser.mp4" type="video/mp4" />
+            </video>
+          )}
         </section>
         <section className={styles.solutions}>
-          <h1>Nossos diferenciais</h1>
-          <p>Escale seu processo seletivo de forma fácil</p>
+          <h1>{isLoading ? <Skeleton /> : 'Nossos diferenciais'}</h1>
+          <p>
+            {isLoading ? (
+              <Skeleton />
+            ) : (
+              'Escale seu processo seletivo de forma fácil'
+            )}
+          </p>
           <div className={styles.solutionsContainer}>
             {solutions.map((solution) => (
               <SolutionBox
