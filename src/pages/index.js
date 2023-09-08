@@ -16,6 +16,23 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const modalCtx = useContext(ContactModalCtx);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      const isMobileDevice = window.innerWidth < 500;
+      setIsMobile(isMobileDevice);
+    };
+
+    window.addEventListener('resize', checkIsMobile);
+
+    checkIsMobile();
+
+    return () => {
+      window.removeEventListener('resize', checkIsMobile);
+    };
+  }, []);
+
   const solutions = [
     {
       id: 1,
@@ -91,7 +108,7 @@ export default function Home() {
       <main>
         <section className={styles.home}>
           <div className={styles.textContainer}>
-            <h1 onClick={modalCtx.consoleLog}>
+            <h1 onClick={() => console.log(isMobile)}>
               {isLoading ? (
                 <Skeleton />
               ) : (
@@ -117,16 +134,8 @@ export default function Home() {
         <section className={styles.video}>
           {isLoading ? (
             <Skeleton
-              height={
-                typeof window !== 'undefined' && window.innerWidth > 400
-                  ? 356
-                  : 180
-              }
-              width={
-                typeof window !== 'undefined' && window.innerWidth > 400
-                  ? 632
-                  : 200
-              }
+              height={isMobile ? 180 : 356}
+              width={isMobile ? 200 : 632}
             />
           ) : (
             <video controls loop width="100%">
@@ -138,11 +147,7 @@ export default function Home() {
           <h1>
             {isLoading ? (
               <Skeleton
-                width={
-                  typeof window !== 'undefined' && window.innerWidth > 400
-                    ? 374
-                    : 200
-                }
+                width={isMobile ? 200 : 374}
                 height={46}
                 style={{ marginTop: '30px' }}
               />
@@ -153,11 +158,7 @@ export default function Home() {
           <p>
             {isLoading ? (
               <Skeleton
-                width={
-                  typeof window !== 'undefined' && window.innerWidth > 400
-                    ? 383
-                    : 200
-                }
+                width={isMobile ? 200 : 383}
                 height={23}
                 style={{ marginBottom: '10px' }}
               />
