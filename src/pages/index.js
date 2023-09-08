@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import Aos from 'aos';
 import Skeleton from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
 
 import Header from '@/components/Header/Header';
 import SolutionBox from '@/components/SolutionBox/SolutionBox';
@@ -10,6 +9,7 @@ import ContactModalCtx from '@/context/moda-context';
 import ContactModal from '@/components/ContactModal/ContactModal';
 
 import styles from '../styles/index.module.scss';
+import 'react-loading-skeleton/dist/skeleton.css';
 import 'aos/dist/aos.css';
 
 export default function Home() {
@@ -87,7 +87,7 @@ export default function Home() {
 
   return (
     <>
-      <Header />
+      <Header isLoading={isLoading} />
       <main>
         <section className={styles.home}>
           <div className={styles.textContainer}>
@@ -124,10 +124,20 @@ export default function Home() {
           )}
         </section>
         <section className={styles.solutions}>
-          <h1>{isLoading ? <Skeleton /> : 'Nossos diferenciais'}</h1>
+          <h1>
+            {isLoading ? (
+              <Skeleton width={374} height={46} style={{ marginTop: '30px' }} />
+            ) : (
+              'Nossos diferenciais'
+            )}
+          </h1>
           <p>
             {isLoading ? (
-              <Skeleton />
+              <Skeleton
+                width={383}
+                height={23}
+                style={{ marginBottom: '10px' }}
+              />
             ) : (
               'Escale seu processo seletivo de forma fácil'
             )}
