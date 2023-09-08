@@ -20,7 +20,7 @@ export default function Home() {
 
   useEffect(() => {
     const checkIsMobile = () => {
-      const isMobileDevice = window.innerWidth < 500;
+      const isMobileDevice = window.innerWidth < 768;
       setIsMobile(isMobileDevice);
     };
 
