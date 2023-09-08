@@ -9,7 +9,7 @@ const Footer = (props) => {
             <img src="/logo.png" alt="footer_logo"/>
           </div>
         </div>
-        <button onClick={props.onClick}>Entre em contato</button>
+        <button onClick={props.onClick}>Lista de espera</button>
       </div>
       <p>© 2023 Copyright: Skill Assist</p>
     </div>

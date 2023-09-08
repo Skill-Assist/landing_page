@@ -104,7 +104,7 @@ export default function Home() {
 
   return (
     <>
-      <Header isLoading={isLoading} />
+      <Header isLoading={isLoading} isMobile={isMobile}/>
       <main>
         <section className={styles.home}>
           <div className={styles.textContainer}>
@@ -171,7 +171,7 @@ export default function Home() {
               if (isLoading) {
                 return (
                   <Skeleton
-                    width={isMobile ? '100%' : 380}
+                    width={isMobile ? 250 : 380}
                     height={280}
                     style={{ margin: '20px' }}
                   />
