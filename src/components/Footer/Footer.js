@@ -11,7 +11,7 @@ const Footer = (props) => {
         </div>
         <button onClick={props.onClick}>Lista de espera</button>
       </div>
-      <p>© 2023 Copyright: Skill Assist</p>
+      <p>© Skill Assist Ltda.</p>
     </div>
   );
 };
