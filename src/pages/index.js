@@ -112,7 +112,7 @@ export default function Home() {
               {isLoading ? (
                 <Skeleton />
               ) : (
-                'Simplificamos a aplicação de provas com IA'
+                'Simplificamos a aplicação de testes de recrutamento com IA'
               )}
             </h1>
             <p>
@@ -120,8 +120,7 @@ export default function Home() {
                 <Skeleton />
               ) : (
                 `Através de uma ferramenta de seleção automatizada, é possível
-                realizar testes de modo mais rápido, seguro, confiável e mais
-                abrangente que nunca.`
+                realizar testes de modo mais rápido, seguro, confiável e abrangente que nunca.`
               )}
             </p>
             {isLoading ? (
